@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Apogee",
+    "section": "",
+    "text": "This proposal outlines the development and implementation of an AI/ML-powered system to enhance the evaluation of NIH grant proposals before submission. This system aims to provide quantitative measures of impact, alignment with funding opportunity announcements (RFAs), and overall grant quality. By leveraging advanced natural language processing (NLP) and machine learning techniques, we can offer researchers valuable insights, improve grant applications, and ultimately increase success rates in securing NIH funding. The system will analyze proposal documents, compare them against existing successful grants, and provide actionable feedback to strengthen applications.\n\n\n\nTo empower researchers with AI-driven tools that provide comprehensive, objective, and timely feedback on NIH grant proposals, maximizing their potential for funding success and advancing scientific discovery.\n\n\n\n\nReadability Scores: Assess the clarity and accessibility of the proposal’s language. (Flesch-Kincaid, etc.)\nSimilarity Metrics: Compare the proposal to previously funded grants (IC, study section, grant type).\nAlignment with RFA: Measure how well the proposal addresses the specific goals and requirements of the RFA.\nQuantitative Impact Measures: Identify and quantify the potential impact of the proposed research.\nKeyword Analysis: Extract and analyze key terms to ensure alignment with current research trends and NIH priorities.\nSMART Metrics: Evaluate the Specificity, Measurability, Achievability, Relevance, and Time-bound nature of the proposed aims.\n\n\n\n\n\nNatural Language Processing (NLP): Analyze the text of the proposal to identify key concepts, research aims, and methodologies.\nMachine Learning (ML): Train models on a dataset of funded and unfunded proposals to predict the likelihood of funding success.\nSimilarity Analysis: Compare the proposal to a database of existing grants to identify similarities and differences.\nMultiaxial Evaluation: Implement a system that evaluates proposals across multiple dimensions (e.g., scientific merit, innovation, feasibility).\nLLM Integration: Use Large Language Models (LLMs) to generate narrative summaries, identify strengths and weaknesses, and provide suggestions for improvement.\n\n\n\n\n\nSSO/MFA: Secure access to the system.\nLLM APIs: Integrate with OpenAI, Azure Open models, and explore local/open-source LLMs.\nGPU: Utilize GPUs for efficient processing of LLM tasks.\nStorage: Robust storage solutions for grant documents, analysis results, and model data.\nWeb Server: A web interface for users to upload and analyze proposals.\nData Engineering Pipeline: Automated pipeline for data ingestion, processing, and analysis.\nSecurity Scanning: Regular security checks to protect sensitive data.\nDatabase: A database to store grant information, evaluation metrics, and analysis results.\n\n\n\n\n\nInputs:\n\nSpecific aims page (+/- previous summary statement)\nRFA PDF\n\nOutputs:\n\nLLM-generated narrative summary\nReadability scores\nSimilarity scores to other grants\nSuggested study sections (+/-)\nKeywords\nSMART metrics (or similar)\n\n\n\n\n\n\nData: PubMed, PMC, Grants Reporter, Citation data, iCite, Patents, Clinical trials, CCTSI grants and summary statements.\nPersonnel: CCTSI (Tom Yaeger, Melanie), Ophthalmology data scientists, Software engineering team (frontend, backend, data engineering, R).\n\n\n\n\n\nCCTSI\nCC\nDean Sampson (?)\nAnticipated Costs:\n\nPersonnel ($10,000)\nAPI/LLM costs ($2,000)\nIT personnel ($XXXXX)\n\n\n\n\n\n\nOGC grant opt-in for AI evaluation\nGrant writing tool to assess grants dynamically\n\n\n\n\n\nFurther define the MVP and develop a detailed project plan.\nSecure necessary funding and resources.\nDevelop and train the AI/ML models.\nBuild the web interface and data pipeline.\nPilot test the system with a small group of researchers.\nGather feedback and iterate on the system.\n\nThis expanded proposal provides a more structured and comprehensive plan for developing your AI/ML-powered grant evaluation system. Remember to tailor it further to your specific audience and context."
+  },
+  {
+    "objectID": "index.html#executive-summary",
+    "href": "index.html#executive-summary",
+    "title": "Apogee",
+    "section": "",
+    "text": "This proposal outlines the development and implementation of an AI/ML-powered system to enhance the evaluation of NIH grant proposals before submission. This system aims to provide quantitative measures of impact, alignment with funding opportunity announcements (RFAs), and overall grant quality. By leveraging advanced natural language processing (NLP) and machine learning techniques, we can offer researchers valuable insights, improve grant applications, and ultimately increase success rates in securing NIH funding. The system will analyze proposal documents, compare them against existing successful grants, and provide actionable feedback to strengthen applications."
+  },
+  {
+    "objectID": "index.html#mission-statement",
+    "href": "index.html#mission-statement",
+    "title": "Apogee",
+    "section": "",
+    "text": "To empower researchers with AI-driven tools that provide comprehensive, objective, and timely feedback on NIH grant proposals, maximizing their potential for funding success and advancing scientific discovery."
+  },
+  {
+    "objectID": "index.html#metrics-of-interest",
+    "href": "index.html#metrics-of-interest",
+    "title": "Apogee",
+    "section": "",
+    "text": "Readability Scores: Assess the clarity and accessibility of the proposal’s language. (Flesch-Kincaid, etc.)\nSimilarity Metrics: Compare the proposal to previously funded grants (IC, study section, grant type).\nAlignment with RFA: Measure how well the proposal addresses the specific goals and requirements of the RFA.\nQuantitative Impact Measures: Identify and quantify the potential impact of the proposed research.\nKeyword Analysis: Extract and analyze key terms to ensure alignment with current research trends and NIH priorities.\nSMART Metrics: Evaluate the Specificity, Measurability, Achievability, Relevance, and Time-bound nature of the proposed aims."
+  },
+  {
+    "objectID": "index.html#evaluation-approaches",
+    "href": "index.html#evaluation-approaches",
+    "title": "Apogee",
+    "section": "",
+    "text": "Natural Language Processing (NLP): Analyze the text of the proposal to identify key concepts, research aims, and methodologies.\nMachine Learning (ML): Train models on a dataset of funded and unfunded proposals to predict the likelihood of funding success.\nSimilarity Analysis: Compare the proposal to a database of existing grants to identify similarities and differences.\nMultiaxial Evaluation: Implement a system that evaluates proposals across multiple dimensions (e.g., scientific merit, innovation, feasibility).\nLLM Integration: Use Large Language Models (LLMs) to generate narrative summaries, identify strengths and weaknesses, and provide suggestions for improvement."
+  },
+  {
+    "objectID": "index.html#infrastructure",
+    "href": "index.html#infrastructure",
+    "title": "Apogee",
+    "section": "",
+    "text": "SSO/MFA: Secure access to the system.\nLLM APIs: Integrate with OpenAI, Azure Open models, and explore local/open-source LLMs.\nGPU: Utilize GPUs for efficient processing of LLM tasks.\nStorage: Robust storage solutions for grant documents, analysis results, and model data.\nWeb Server: A web interface for users to upload and analyze proposals.\nData Engineering Pipeline: Automated pipeline for data ingestion, processing, and analysis.\nSecurity Scanning: Regular security checks to protect sensitive data.\nDatabase: A database to store grant information, evaluation metrics, and analysis results."
+  },
+  {
+    "objectID": "index.html#minimum-viable-product-mvp",
+    "href": "index.html#minimum-viable-product-mvp",
+    "title": "Apogee",
+    "section": "",
+    "text": "Inputs:\n\nSpecific aims page (+/- previous summary statement)\nRFA PDF\n\nOutputs:\n\nLLM-generated narrative summary\nReadability scores\nSimilarity scores to other grants\nSuggested study sections (+/-)\nKeywords\nSMART metrics (or similar)"
+  },
+  {
+    "objectID": "index.html#available-resources",
+    "href": "index.html#available-resources",
+    "title": "Apogee",
+    "section": "",
+    "text": "Data: PubMed, PMC, Grants Reporter, Citation data, iCite, Patents, Clinical trials, CCTSI grants and summary statements.\nPersonnel: CCTSI (Tom Yaeger, Melanie), Ophthalmology data scientists, Software engineering team (frontend, backend, data engineering, R)."
+  },
+  {
+    "objectID": "index.html#funding",
+    "href": "index.html#funding",
+    "title": "Apogee",
+    "section": "",
+    "text": "CCTSI\nCC\nDean Sampson (?)\nAnticipated Costs:\n\nPersonnel ($10,000)\nAPI/LLM costs ($2,000)\nIT personnel ($XXXXX)"
+  },
+  {
+    "objectID": "index.html#ideas",
+    "href": "index.html#ideas",
+    "title": "Apogee",
+    "section": "",
+    "text": "OGC grant opt-in for AI evaluation\nGrant writing tool to assess grants dynamically"
+  },
+  {
+    "objectID": "index.html#next-steps",
+    "href": "index.html#next-steps",
+    "title": "Apogee",
+    "section": "",
+    "text": "Further define the MVP and develop a detailed project plan.\nSecure necessary funding and resources.\nDevelop and train the AI/ML models.\nBuild the web interface and data pipeline.\nPilot test the system with a small group of researchers.\nGather feedback and iterate on the system.\n\nThis expanded proposal provides a more structured and comprehensive plan for developing your AI/ML-powered grant evaluation system. Remember to tailor it further to your specific audience and context."
+  }
+]
