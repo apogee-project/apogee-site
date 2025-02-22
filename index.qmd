@@ -3,8 +3,6 @@ title: "Apogee"
 subtitle: "AI/ML-Powered Grant Evaluation, Education, and Efficiency Ecosystem"
 ---
 
-# Proposal: AI/ML-Powered NIH Grant Proposal Evaluation System
-
 ## 1. Executive Summary
 
 This proposal outlines the development and implementation of an AI/ML-powered system to enhance the evaluation of NIH grant proposals before submission. This system aims to provide quantitative measures of impact, alignment with funding opportunity announcements (RFAs), and overall grant quality. By leveraging advanced natural language processing (NLP) and machine learning techniques, we can offer researchers valuable insights, improve grant applications, and ultimately increase success rates in securing NIH funding. The system will analyze proposal documents, compare them against existing successful grants, and provide actionable feedback to strengthen applications.
@@ -12,6 +10,8 @@ This proposal outlines the development and implementation of an AI/ML-powered sy
 ## 2. Mission Statement
 
 To empower researchers with AI-driven tools that provide comprehensive, objective, and timely feedback on NIH grant proposals, maximizing their potential for funding success and advancing scientific discovery.
+
+SEE the [formal proposal](./strategic-plan.md)
 
 ## 3. Metrics of Interest
 
@@ -83,4 +83,3 @@ To empower researchers with AI-driven tools that provide comprehensive, objectiv
 - Pilot test the system with a small group of researchers.
 - Gather feedback and iterate on the system.
 
-This expanded proposal provides a more structured and comprehensive plan for developing your AI/ML-powered grant evaluation system. Remember to tailor it further to your specific audience and context.

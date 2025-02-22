@@ -1,0 +1,126 @@
+---
+title: "Apogee architecture"
+format:
+  html:
+    mermaid:
+      theme: forest
+---
+
+## Data flow
+
+The Apogee system consists of several key components that interact to provide a seamless user experience. @fig-data-flow illustrates the flow of data and processes within the system, highlighting the interactions between users, external services, and internal components.
+
+### Key Components
+
+1. Security Layer:
+   - All processes are contained within a secure environment
+   - Access requires VPN or campus connection
+   - Authentication handled through SSO
+
+2. Core Processes:
+   - Authentication Process: Handles user verification
+   - Document Processing: Manages document uploads
+   - AI Analysis Process: Coordinates with Azure OpenAI
+   - Notification Process: Manages email alerts
+   - Result Viewing Process: Handles result display
+
+3. External Systems:
+   - SSO Service
+   - Azure OpenAI
+   - Email Service
+
+4. Data Store:
+   - Central database storing both documents and results
+
+
+```{mermaid}
+%%| label: fig-data-flow
+%%| fig-cap: "A data flow/architecture diagram."
+flowchart LR
+    %% External Entities
+    User((User))
+    SSO[(SSO Service)]
+    AzureAI[(Azure OpenAI)]
+    Email[(Email Service)]
+    
+    %% Data Stores
+    DB[(Database)]
+    
+    %% Processes
+    AuthP[Authentication Process]
+    DocP[Document Processing]
+    AIProc[AI Analysis Process]
+    NotifP[Notification Process]
+    ResultP[Result Viewing Process]
+    
+    %% Network Security
+    subgraph Secure Environment
+        direction TB
+        AuthP
+        DocP
+        AIProc
+        NotifP
+        ResultP
+        DB
+    end
+    
+    %% Data Flows
+    User -->|VPN/Campus Access| AuthP
+    AuthP <-->|Verify Identity| SSO
+    User -->|Submit Document| DocP
+    DocP -->|Store Document| DB
+    DocP -->|Trigger Analysis| AIProc
+    AIProc <-->|API Request/Response| AzureAI
+    AIProc -->|Store Results| DB
+    AIProc -->|Trigger Notification| NotifP
+    NotifP -->|Send Email| Email
+    Email -->|Notify| User
+    User -->|View Results| ResultP
+    ResultP -->|Fetch Results| DB
+```
+
+
+## Sequence Diagram
+
+The sequence diagram below illustrates the interaction between the user, the web application, external services, and the database. The flow of events starts with the user accessing the web application, logging in through the SSO service, uploading a document, triggering AI analysis, receiving a notification, and viewing the results.
+
+
+```{mermaid}
+%%| label: fig-sequence-diagram
+%%| fig-cap: "A sequence diagram illustrating the interaction between the user, web application, external services, and the database."
+sequenceDiagram
+    actor User
+    participant SSO as SSO Service
+    participant Web as Web Application
+    participant DB as Database
+    participant AI as Azure OpenAI
+    participant Email as Email Service
+
+    %% Authentication Flow
+    User->>Web: Access Application
+    Web->>SSO: Redirect to SSO
+    SSO-->>User: Login prompt
+    User->>SSO: Provide credentials
+    SSO-->>Web: Authentication token
+    Web-->>User: Display document upload page
+
+    %% Document Upload Flow
+    User->>Web: Upload document
+    Web->>DB: Store document
+    DB-->>Web: Document ID
+    
+    %% AI Processing Flow
+    Web->>AI: Send document for analysis
+    AI-->>Web: Return analysis results
+    Web->>DB: Store results
+    
+    %% Notification Flow
+    Web->>Email: Request notification
+    Email-->>User: Send results available email
+    
+    %% Results Viewing Flow
+    User->>Web: Access results page
+    Web->>DB: Fetch results
+    DB-->>Web: Return results
+    Web-->>User: Display results
+```
